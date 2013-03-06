@@ -1,0 +1,573 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+		<style type="text/css">
+			/* Client-specific Styles */
+			#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" button. */
+			body{width:100% !important;} .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+			body{-webkit-text-size-adjust:none;} /* Prevent Webkit platforms from changing default text sizes. */
+			
+			/* Reset Styles */
+			body{margin:0; padding:0;}
+			img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+			table td{border-collapse:collapse;}
+			#backgroundTable{height:100% !important; margin:0; padding:0; width:100% !important;}
+			
+			/* Template Styles */
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: COMMON PAGE ELEMENTS /\/\/\/\/\/\/\/\/\/\ */
+
+			body, #backgroundTable{
+				background: #F6F6F7 url(images/bg_x.gif) repeat-x 0 0;
+			}
+			
+			/**
+			* @tab Page
+			* @section email border
+			* @tip Set the border for your email.
+			*/
+			#templateContainer{
+				border:0;
+			}
+			
+			/**
+			* @tab Page
+			* @section heading 1
+			* @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
+			* @style heading 1
+			*/
+			h1, .h1{
+				color:#005BB3;
+				display:block;
+				font-family:Arial;
+				font-size:16px;
+				font-weight:normal;
+				line-height:135%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:1%;
+				margin-left:0;
+				padding-top:10px;
+				text-align:left;
+				text-transform: uppercase;
+			}
+
+			/**
+			* @tab Page
+			* @section heading 2
+			* @tip Set the styling for all second-level headings in your emails.
+			* @style heading 2
+			*/
+			h2, .h2{
+				color:#000000;
+				display:block;
+				font-family:Arial;
+				font-size:10px;
+				font-weight:bold;
+				line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:1px;
+				margin-left:0;
+				padding-top:5px;
+				text-align:left;
+				text-transform: uppercase;
+			}
+
+			/**
+			* @tab Page
+			* @section heading 3
+			* @tip Set the styling for all third-level headings in your emails.
+			* @style heading 3
+			*/
+			h3, .h3{
+				border-bottom: #F9BD9B 2px solid;
+				color:#000000;
+				display:block;
+				font-family:Arial;
+				font-size:12px;
+				font-weight:bold;
+				line-height:100%;
+				margin-top:2%;
+				margin-right:0;
+				margin-bottom:1%;
+				margin-left:0;
+				padding-bottom: 4px;
+				text-align:left;
+			}
+			h3.table {
+				font-size:10px;
+				padding-left:6px;
+			}
+
+			/**
+			* @tab Page
+			* @section heading 4
+			* @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
+			* @style heading 4
+			*/
+			h4, .h4{
+				color:#6D6E70;
+				display:block;
+				font-family:Arial;
+				font-size:9px;
+				font-weight:normal;
+				line-height:100%;
+				margin-top:2%;
+				margin-right:0;
+				margin-bottom:1%;
+				margin-left:0;
+				text-align:left;
+			}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: PREHEADER /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Header
+			* @section preheader style
+			* @tip Set the background color for your email's preheader area.
+			* @theme page
+			*/
+			#templatePreheader{
+				background-color:#FAFAFA;
+			}
+			
+			/**
+			* @tab Header
+			* @section social bar style
+			* @tip Set the background color and border for your email's footer social bar.
+			*/
+			#social div{
+				text-align:right;
+			}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: HEADER /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Header
+			* @section header style
+			* @tip Set the background color and border for your email's header area.
+			* @theme header
+			*/
+			#templateHeader{
+				background-color: none;
+			}
+			
+			#templateBody {
+				background: transparent url('images/bg.png') repeat-y 0 0;
+			}
+			
+			/**
+			* @tab Header
+			* @section header text
+			* @tip Set the styling for your email's header text. Choose a size and color that is easy to read.
+			*/
+			.headerContent{
+				color:#202020;
+				font-family:Arial;
+				font-size:10px;
+				font-weight:bold;
+				line-height:100%;
+				padding:0;
+				text-align: left;
+				vertical-align:middle;
+			}
+			.headerContent div {
+				width:610px;height:117px;overflow:hidden;padding:0;margin:0;
+			}
+			
+			/**
+			* @tab Header
+			* @section header link
+			* @tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
+			*/
+			.headerContent a:link, .headerContent a:visited, /* Yahoo! Mail Override */ .headerContent a .yshortcuts /* Yahoo! Mail Override */{
+				color:#005BB3;
+				font-weight:normal;
+				text-decoration:underline;
+			}
+			
+			#headerImage{
+				height:auto;
+				max-width:610px !important;
+			}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MAIN BODY /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Body
+			* @section body style
+			* @tip Set the background color for your email's body area.
+			*/
+			.bodyContent{
+			}
+			
+			/**
+			* @tab Body
+			* @section body text
+			* @tip Set the styling for your email's main content text. Choose a size and color that is easy to read.
+			* @theme main
+			*/
+			.bodyContent div{
+				color:#4d4d4d;
+				font-family:Arial;
+				font-size:11px;
+				line-height:130%;
+				text-align:left;
+			}
+			
+			/**
+			* @tab Body
+			* @section body link
+			* @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
+			*/
+			.bodyContent div a:link, .bodyContent div a:visited, /* Yahoo! Mail Override */ .bodyContent div a .yshortcuts /* Yahoo! Mail Override */{
+				color:#4d4d4d;
+				font-weight:bold;
+				text-decoration:underline;
+			}
+			.bodyContent div a.more {
+				display: block;
+				height: 16px;
+				margin-top: 5px;
+				width: 80px;
+			}
+			
+			.bodyContent img{
+				display:inline;
+				height:auto;
+			}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: SIDEBAR /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Sidebar
+			* @section sidebar style
+			* @tip Set the background color and border for your email's sidebar area.
+			*/
+			#templateSidebar{
+				margin: 0;
+				padding: 0;
+			}
+			
+			/**
+			* @tab Sidebar
+			* @section sidebar style
+			* @tip Set the background color and border for your email's sidebar area.
+			*/
+			.sidebartop {
+				margin-top:0;
+				margin-bottom:0;
+				margin-left: 5px;
+				* margin-left: 3px;
+				padding:0;
+			}
+			.sidebartop div{
+				background: white url('images/sidebar_top.gif') no-repeat 0 0;
+				width: 150px;
+				height: 14px;
+				padding-top:0px;
+				padding-right:0px;
+				padding-bottom:0px;
+				padding-left: 5px;
+				margin: 0px;
+			}
+			/**
+			* @tab Sidebar
+			* @section sidebar text
+			* @tip Set the styling for your email's sidebar text. Choose a size and color that is easy to read.
+			*/
+			.sidebarContent div{
+				color:#4d4d4d;
+				font-family:Arial;
+				font-size:10px;
+				line-height:130%;
+				text-align:left;
+				border-bottom: 1px solid #3F84C6;
+				border-right: 1px solid #3F84C6;
+				margin-left: 5px;
+				padding-left:23px;
+				padding-right:11px;
+				padding-bottom:32px;
+			}
+			
+			/**
+			* @tab Sidebar
+			* @section sidebar link
+			* @tip Set the styling for your email's sidebar links. Choose a color that helps them stand out from your text.
+			*/
+			.sidebarContent div a:link, .sidebarContent div a:visited, /* Yahoo! Mail Override */ .sidebarContent div a .yshortcuts /* Yahoo! Mail Override */{
+				color:#005BB3;
+				font-weight:normal;
+				text-decoration:underline;
+			}
+			
+			.sidebarContent img{
+				display:inline;
+				height:auto;
+			}
+
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: FOOTER /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Footer
+			* @section footer style
+			* @tip Set the background color and top border for your email's footer area.
+			* @theme footer
+			*/
+			#templateFooter{
+			}
+			
+			/**
+			* @tab Footer
+			* @section footer text
+			* @tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
+			* @theme footer
+			*/
+			.footerContent div{
+				color:#A7A8AC;
+				font-family:Arial;
+				font-size:10px;
+				line-height:125%;
+				text-align:left;
+			}
+			
+			/**
+			* @tab Footer
+			* @section footer link
+			* @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
+			*/
+			.footerContent div a:link, .footerContent div a:visited, /* Yahoo! Mail Override */ .footerContent div a .yshortcuts /* Yahoo! Mail Override */{
+				color:#818181;
+				font-weight:normal;
+				text-decoration:underline;
+			}
+			
+			.footerContent img{
+				display:inline;
+			}
+
+			table.information tr td {
+				border-bottom:1px solid #DEDFE0;
+				color:#333333;
+				font-size: 10px;
+			}
+			table.information tr td.first {
+				padding-left: 6px;
+			}
+			
+			/**
+			* Overrides & Classes
+			*/
+			.black {
+				color:#231F20;
+			}
+			.orange {
+				color:#E36F2E;
+			}
+			.blue {
+				color:#005BB3;
+			}
+			.lightblue {
+				color:#7FADD9;
+			}
+			.grey {
+				color:#6D6E70;
+			}
+			.strong {
+				font-weight: bold;
+			}
+			.italic {
+				font-style: italic;
+			}
+			.sidebarContent div .small, .small {
+				font-size: 11px;
+			}
+			.bigblue {
+				color:#005BB3;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+			.large {
+				font-size: 13px;
+			}
+			.black {
+				color:#231F20;
+			}
+			ol, ul, li {
+				padding: 0;
+				margin: 0;
+				
+			}
+			li {
+				margin: 6px 0 0 19px;
+				padding: 0 0 11px 0;
+			}
+
+		</style>
+	</head>
+  <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+  	<center>
+    	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable">
+      	<tr>
+        	<td align="center" valign="top">
+          	<table border="0" cellpadding="0" cellspacing="0" width="610" id="templateContainer">
+            	<tr>
+              	<td align="center" valign="top">
+                  <!-- // Begin Template Header \\ -->
+                	<table border="0" cellpadding="0" cellspacing="0" width="610" id="templateHeader">
+                    <tr>
+                    	<td class="headerContent">
+												<div>
+                      		<img src="images/header.gif" style="max-width:610px;" id="headerImage campaign-icon" />
+												</div>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- // End Template Header \\ -->
+                </td>
+              </tr>
+							
+              	<td align="center" valign="top">
+                  <!-- // Begin Template Body \\ -->
+                	<table border="0" cellpadding="0" cellspacing="0" width="610" id="templateBody">
+                  	<tr>
+                    	<!-- // Begin Sidebar \\ -->
+                    	<td valign="top" width="160" id="templateSidebar">
+                      	<table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top:12px;padding-bottom:23px;">
+                        	<tr>
+                          	<td valign="top" style="padding:0;margin:0;">
+                            
+                              <!-- // Begin Module: Standard Content \\ -->
+                              <table border="0" cellpadding="0" cellspacing="0" width="100%" class="sidebartop">
+				                        <tr>
+			                            <td valign="top" style="padding:0;margin:0;">
+																		<div></div>
+			                            </td>
+			                          </tr>
+                              </table>
+                              <!-- // End Module: Standard Content \\ -->
+                            
+                            </td>
+                          </tr>
+                        	<tr>
+                          	<td valign="top">
+                            
+                              <!-- // Begin Module: Standard Content \\ -->
+                              <table border="0" cellpadding="0" cellspacing="0" width="100%" class="sidebarContent">
+                                <tr>
+                                  <td valign="top" style="padding:0;margin:0;">
+                                    <div>
+																			<h2 class="h2">Summary of Cost <br />Basis Services</h2>
+																			<br />
+																			Review details about each option in the <span class="bigblue">Summary of Cost Basis Services</span> <br />and contact your service team at 800-528-9595 <br />to confirm your <br />selection.<br /><br /><br />
+																			<a href="#"><img src="images/btn_go.gif" width="109" height="22" alt="Go"></a>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                              <!-- // End Module: Standard Content \\ -->
+                            
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <!-- // End Sidebar \\ -->
+                    	<td style="padding-left: 0; padding-right:0;" valign="top" class="bodyContent">
+                      
+                        <!-- // Begin Module: Standard Content \\ -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td valign="top" style="padding-top:12px;padding-left: 23px;padding-right: 28px;">
+                             <div>
+															   <h1 class="h1">New Cost Basis Reconciliation<br>
+																	<span class="lightblue">Service Options</span></h1><br />
+																	<strong>Schwab Performance Technologies is committed to supporting you through regulatory changes that impact your portfolio accounting needs and we are pleased to announce the new cost basis reconciliation services available to PortfolioServices clients.</strong><br /><br />
+
+																	<strong>The value in reconciling cost basis within PortfolioServices is that it allows your records to match your custodian&rsquo;s data so you can use it as the source of accurate gain/loss reporting and trading for your clients.</strong><br /><br />
+																	<h3 class="table">TABLE SAMPLE</h3>
+																	<table class="information" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+																		<tr>
+																			<td class="first">Information goes here</td><td>Location</td><td>Date</td>
+																		</tr>
+																		<tr>
+																			<td class="first">Information goes here</td><td>Location</td><td>Date</td>
+																		</tr>
+																		<tr>
+																			<td class="first">Information goes here</td><td>Location</td><td>Date</td>
+																		</tr>
+																		<tr>
+																			<td class="first">Information goes here</td><td>Location</td><td>Date</td>
+																		</tr>
+																	</table>
+																	<br />
+																	<h3>Select Your Option by March 31</h3>
+																	There are three cost basis reconciliation service options from which to choose and we require your selection by March 31. Please be advised that if we do not receive your selection by March 31, we will assume your firm opts out of all cost basis tracking services. If you decide to opt-in for cost basis reconciliation after March 31, your reconciliation will begin at the time of your request and will not be backdated to an earlier date.<br /><br />
+																	<h3>Choose One of the Following Options for Your Firm</h3>
+																	<ul>
+																		<li><span class="strong blue">Opt Out</span>&mdash;Your decision to track cost basis in PortfolioServices is completely optional and you may elect to opt out of all cost basis tracking services. The performance reporting and billing services we provide you today will remain unchanged.<br />
+																			<a class="more" href="#"><img src="images/btn_learn_more.gif" width="80" height="16" alt="Btn Learn More"></a></li>
+																		<li><span class="strong blue">Opt In to Cost Basis Reconciliation with Automated Reset</span>&mdash; Our system will automatically reset your cost basis to match your custodian&rsquo;s systems as of a specific date. We will reconcile accounts using the cost basis download files from primary custodians and there is no additional fee for this service.	<br />
+																				<a class="more" href="#"><img src="images/btn_learn_more.gif" width="80" height="16" alt="Btn Learn More"></a></li>
+																	</ul><br />
+																	Our goal is to provide you with industry-leading solutions and we will continue to update our platform as new phases of the cost basis legislation take effect over the coming years.
+																	Thank you for working with Schwab Performance Technologies.
+																	<br /><br />
+																	<strong>To stop receiving email from us, please <a href="">unsubscribe</a>.</strong><br /><br />
+															</div>
+														</td>
+                          </tr>
+                        </table>
+                        <!-- // End Module: Standard Content \\ -->
+                      
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- // End Template Body \\ -->
+                </td>
+              </tr>
+            	<tr>
+              	<td align="center" valign="top">
+                  <!-- // Begin Template Footer \\ -->
+                	<table border="0" cellpadding="0" cellspacing="0" width="610" id="templateFooter">
+                  	<tr>
+                    	<td valign="top" class="footerContent">
+                      
+                        <!-- // Begin Module: Standard Footer \\ -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td valign="top" style="padding-left:0;padding-right:0;padding-top:0;">
+															<div>
+			                      		<img src="images/footer.png" style="max-width:610px;" width="610" height="10" id="headerImage campaign-icon" />
+															</div>
+															<div style="padding-left:8px;padding-right:8px;padding-top:8px;">We respect your privacy. Read more about Schwab Performance Technologies&rsquo; privacy policy.
+															<br /><br />
+
+															NOTICE: All email sent to or from the Charles Schwab corporate email system may be retained, monitored and/or reviewed by Schwab personnel.<br /><br />
+															
+															Schwab Performance Technologies, Two Hannover Square, 13th Floor, 434 Fayetteville Street, Raleigh, NC 27601, USA.<br /><br />
+
+															&copy;2011 Schwab Performance Technologies. All rights reserved. Schwab Performance Technologies is a subsidiary 
+															of The Charles Schwab Corporation.
+															</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- // End Module: Standard Footer \\ -->
+                      
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- // End Template Footer \\ -->
+                </td>
+              </tr>
+            </table>
+            <br />
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>

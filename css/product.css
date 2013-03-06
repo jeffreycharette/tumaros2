@@ -1,0 +1,72 @@
+
+/* attributes */
+ul.attributes { background: url('../img/products/bracket-top-blue-380px.png') no-repeat scroll center top, url('../img/products/bracket-bottom-blue-380px.png') no-repeat scroll center bottom; margin: 0 0 20px; padding: 45px 20px 25px; }
+
+.attributes > li { background: transparent url('../img/products/sprite-coconut-water-attributes.png') no-repeat scroll 0 0; display: block; height: 37px; margin: 0 0 30px; text-indent: -9999px; width: 150px; }
+
+.attributes > li.natural 			{ background-position: 0 0; height: 37px; }
+.attributes > li.isotonic 			{ background-position: 0 -66px; height: 270px; }
+.attributes > li.low-calorie 		{ background-position: -192px 0; height: 37px; }
+.attributes > li.potassium 			{ background-position: -192px -74px; height: 60px; }
+.attributes > li.no-added-sugar 	{ background-position: -192px -168px; height: 90px; }
+.attributes > li.no-fat 			{ background-position: -192px -299px; height: 34px; }
+
+.attributes .trigger { display: block; height: 100%; }
+
+
+/* product-image */
+.product-image h3,
+.product-image .size { color: #25b0c8; font-size: 22px; }
+
+.enlarge-box { display: none; }
+
+
+.product-details > p { color: #25b0c8; font-size: 24px; }
+.coconut-water .product-details > p { font-size: 16px; }
+
+/* ingredients */
+.ingredients h3 { color: #00B7B4; font-size: 22px; line-height: 1em; margin: 0 0 .5em; }
+.ingredients h3 b { color: #B6E13B; font-size: 42px; }
+
+
+p.non-gmo { font-size: 13px; padding-top: 5px; }
+
+
+
+/* tooltip */
+.bubbleInfo {
+    position: relative;
+}
+
+.popup {
+	background: transparent url('../img/products/bubble-tip.png') no-repeat scroll 0 0;
+
+	/*
+	border: 1px solid #333;
+	-moz-box-shadow: 0px 3px 10px rgba(0,0,0,.35), inset 0px 1px 0px rgba(255,255,255,.5);
+	-webkit-box-shadow: 0px 3px 10px rgba(0,0,0,.35), inset 0px 1px 0px rgba(255,255,255,.5);
+	box-shadow: 0px 3px 10px rgba(0,0,0,.35), inset 0px 1px 0px rgba(255,255,255,.5);
+	*/
+
+	color: #fff;
+	
+	line-height: 1.4em;
+	
+	text-align: center;
+	text-indent: 0;
+	text-transform: none;
+
+
+	padding: 15px 15px 10px;
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 14px;
+	text-shadow: 0 1px 2px rgba(0,0,0,.35);
+	border-radius: 5px; -moz-border-radius: radius; -webkit-border-radius: radius; 
+	
+	height: 66px; /* 96 - 20 - 10 */
+	width: 165px;
+	z-index: 150;
+	
+    position: absolute;
+    display: none; /* keeps the popup hidden if no JS available */
+}

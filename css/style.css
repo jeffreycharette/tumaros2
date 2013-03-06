@@ -1,0 +1,859 @@
+@import url('fonts/stylesheet.css');
+
+/* @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,700); */
+/**
+ * HTML5 ✰ Boilerplate
+ *
+ * style.css contains a reset, font normalization and some base styles.
+ *
+ * Credit is left where credit is due.
+ * Much inspiration was taken from these projects:
+ * - yui.yahooapis.com/2.8.1/build/base/base.css
+ * - camendesign.com/design/
+ * - praegnanz.de/weblog/htmlcssjs-kickstart
+ */
+
+
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+input, select { vertical-align: middle; }
+
+
+/**
+ * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
+ */
+
+body { font:18px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
+select, input, textarea, button { font:99% sans-serif; }
+
+/* Normalize monospace sizing:
+   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+
+/**
+ * Minimal base styles.
+ */
+
+/* Always force a scrollbar in non-IE */
+html { overflow-y: scroll; }
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
+
+ul, ol { margin: .5em 0 1em 2em; }
+ol { list-style-type: decimal; }
+
+/* Remove margins for navigation lists */
+.nav ul, .nav li { margin: 0; list-style:none; list-style-image: none; }
+
+small { font-size: 85%; }
+b, strong { font-weight: bold; }
+em, i { font-style: italic; }
+
+td { vertical-align: top; }
+
+/* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+pre {
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; white-space: pre-wrap; word-wrap: break-word;
+  padding: 15px;
+}
+
+textarea { overflow: auto; } /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
+
+.ie6 legend, .ie7 legend { margin-left: -7px; } 
+
+/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea { margin: 0; }
+
+/* Colors for form validity */
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid {
+   border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+.required {
+	color: red;
+}
+
+/* These selection declarations have to be separate
+   No text-shadow: twitter.com/miketaylr/status/12228805301
+   Also: hot pink! */
+::-moz-selection{ background:#fDB414; color:#333; text-shadow: none; }
+::selection { background:#fDB414; color:#333; text-shadow: none; }
+
+/* j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #8fa04d; }
+
+/* Make buttons play nice in IE:
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {  width: auto; overflow: visible; }
+
+/* Bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+/**
+ * You might tweak these..
+ */
+
+body, select, input, textarea, button {
+	/* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+	color: #231F20;
+	/* Set your base font here, to apply evenly */
+	font-family: "proxima-nova-alt-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
+h1, h2, h3, h4, h5, h6 { font-family: "ProximaNovaLight", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal; text-transform: uppercase; }
+
+a, a:active, a:visited { color: #EC2A2B; text-decoration: none; }
+a:hover { color: #EC2A2B; text-decoration: underline; }
+
+img { max-width: 100%; }
+
+
+/**
+ * Primary styles
+ *
+ * Author: Christopher Pond (http://www.ponddesign.me)
+ */
+html { background: #EFEFEB url('../images/t1/bg.png') repeat scroll center 0;  }
+body.bg { background: transparent url('../images/t1/bg-footer.png') bottom center no-repeat fixed; }
+#container { background: transparent url('../images/t1/bg-header.jpg') repeat-x scroll center 0; }
+
+/* header */
+.header h1 { background: transparent url('../images/t1/logo.png') no-repeat scroll 0 0; height: 165px; position: relative; text-indent: -9999px; width: 246px; z-index: 9999; }
+.header h1 a { display: block; height: 100%; }
+
+
+/* main nav */
+.nav { margin: 0 auto 1em; padding: 86px 0 0; width: 185px; }
+.nav > ul { height: 400px; margin: 0; position: relative; width: 240px;}
+.ie7 .nav > ul { z-index: 2000; }
+
+.nav > ul > li { background: transparent url('../images/t1/nav-sprite.png') no-repeat scroll left top; margin-bottom: 8px; position: relative; text-indent: -9999px; z-index: 100; height: 33px; }
+
+/* sprite, image replacement */
+.nav > ul > li.products { 				background-position: left 0px; }
+.nav > ul > li.about { 					background-position: left -41px; }
+.nav > ul > li.say-what { 				background-position: left -82px; }
+.nav > ul > li.todays-the-day { 		background-position: left -121px; height: 55px; }
+.nav > ul > li.overheard { 				background-position: left -185px; }
+.nav > ul > li.skip-the-sandwich { 		background-position: left -225px; height: 55px; }
+.nav > ul > li.connect { 				background-position: left -289px; }
+.nav > ul > li.recipes { 				background-position: left -329px; }
+
+#bd .nav > ul > li:hover, #bd .nav > ul > li.active { background-position-x: -244px; }
+
+.nav li > a { display: block; height: 100%; }
+
+.nav li > div { background: #FBF9F6 url('../images/t1/bg-nav-popouts.png') repeat-y scroll 0 0; border: 4px solid black; color: #FFFFFF; height: 129px; left: 213px; margin: 0; opacity: 0; position: relative; text-align: left; text-indent: 0; letter-spacing: 0; text-transform: none; top: -58px; visibility: hidden; width: 360px; z-index: 200;
+
+-webkit-box-shadow: 0 2px 5px rgba(0,0,0,.3);
+   -moz-box-shadow: 0 2px 5px rgba(0,0,0,.3);
+     -o-box-shadow: 0 2px 5px rgba(0,0,0,.3);
+        box-shadow: 0 2px 5px rgba(0,0,0,.3);
+
+-webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+     -o-border-radius: 6px;
+        border-radius: 6px;
+
+}
+.nav > ul > li .categories,
+.nav > ul > li .store-locator,
+.nav > ul > li .faq,
+.nav > ul > li .tumaros-story,
+.nav > ul > li .what-is-healthy,
+.nav > ul > li .todays-the-day-to-change,
+.nav > ul > li .press,
+.nav > ul > li .real-people-reviews,
+.nav > ul > li .camparison-page,
+.nav > ul > li .facebook,
+.nav > ul > li .join-email-list,
+.nav > ul > li .contact-us,
+.nav > ul > li .recipe-cards {
+	background: transparent url('../images/t1/icon-basket.png') no-repeat scroll 0 0;
+	padding-left: 25px;
+}
+.nav > ul > li .store-locator {	background: transparent url('../images/t1/icon-location.png') no-repeat scroll 1px 0; }
+.nav > ul > li .faq {	background: transparent url('../images/t1/icon-info.png') no-repeat scroll 0 0; }
+.nav > ul > li .press {	background: transparent url('../images/t1/icon-pin.png') no-repeat scroll 0 2px; }
+.nav > ul > li .real-people-reviews {	background: transparent url('../images/t1/icon-person.png') no-repeat scroll 0 2px; }
+.nav > ul > li .facebook {	background: transparent url('../images/t1/icon-fb.png') no-repeat scroll 3px 0; }
+.nav > ul > li .join-email-list {	background: transparent url('../images/t1/icon-mail.png') no-repeat scroll 0 4px; }
+.nav > ul > li .tumaros-story,
+.nav > ul > li .what-is-healthy,
+.nav > ul > li .todays-the-day-to-change,
+.nav > ul > li .camparison-page,
+.nav > ul > li .contact-us,
+.nav > ul > li .recipe-cards {	background: transparent url('../images/t1/icon-message.png') no-repeat scroll 0 4px; }
+
+.ie7 .nav li > div {}
+
+.nav li:hover {}
+.nav li:hover > div { opacity: 1; visibility: visible; }
+
+.nav .pop-nav a { 
+	display: block; 
+	color: #FFFFFF;
+	font-family: "ProximaNovaLight", "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 20px;
+	text-shadow: 0 -1px 1px rgba(96, 57, 19, 1);
+	text-decoration: none;
+	margin-bottom: .6em; 
+}
+.nav .pop-nav a:hover,
+.nav .pop-nav a:active { /* color: #9DC92A; */ }
+.nav .pop-nav .left-nav {
+	float: left;
+	height: 130px;
+	padding-top: 7px;
+	width: 200px;
+}
+.nav .pop-nav h1 {
+	color: #231F20;
+	line-height: 1.35em;
+}
+
+/* popout arrows */
+.pop i { background: transparent url('../images/t1/nav-arrow.png') no-repeat scroll 0 0; top: 12px; left: -20px; display: block; position: absolute; height: 42px; width: 20px; z-index: 1; }
+.pop-0 i,
+.pop-1 i,
+.pop-2 i,
+.pop-3 i,
+.pop-4 i,
+.pop-5 i { background-position: 0 0; }
+
+/* popout contents */
+.nav li .wrapper { font-size: 22px; padding: 9px 0 0 25px; overflow: auto; }
+
+/* footer */
+.footer { margin: 0 0 2em; }
+.main .footer ul { margin: 0; padding: 0; text-align: right; }
+
+
+.main .footer li { display: inline; font-size: 14px; margin: 0 0 0 2em; text-align: right; }
+.footer .copyright {}
+.footer, .footer a, .footer a:visited { color: #000000; text-decoration: none; font-weight: normal; } /* footer text colors */
+.footer a:hover { text-decoration: underline; }
+
+.main .facebook-like-counter { height: 27px; margin: 1em 0 0; float: right; width: 420px; }
+
+.main { margin-bottom: 2em; overflow: hidden; position: relative; z-index: 1; }
+
+@-moz-document url-prefix() {
+	.main { margin-bottom: -2em; }
+}
+
+.main .shopping-cart { background: transparent url('../images/t1/icon-shopping-cart.png') no-repeat scroll 0 0; display: block; color: #FFFFFF; font-size: 18px; height: 28px; line-height: 28px; position: absolute; right: 290px; text-decoration: none; top: 37px; text-indent: -9009px; width: 61px; }
+
+/* ----- SEARCH STYLES ----- */
+form.search { background: #592e14 url('../images/t1/bg-search.png') repeat scroll 0 0; margin: 1em 0; padding: 1em 1em .3em; position: absolute; top: 0; right: 0; width: 250px; z-index: 100;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	        border-radius: 10px;
+	-webkit-box-shadow: 0 2px 5px rgba(0,0,0,.5), inset 0px 1px 0px rgba(255,255,255,.35);
+	   -moz-box-shadow: 0 2px 5px rgba(0,0,0,.5), inset 0px 1px 0px rgba(255,255,255,.35);
+	     -o-box-shadow: 0 2px 5px rgba(0,0,0,.5), inset 0px 1px 0px rgba(255,255,255,.35);
+	        box-shadow: 0 2px 5px rgba(0,0,0,.5), inset 0px 1px 0px rgba(255,255,255,.35);
+	
+}
+
+.hide-fix { visibility: hidden; }
+
+form.search li { list-style-type: none; margin-bottom: .5em; }
+form.blur,
+.ie7 form.search /* for ie7, don't show background */ { background: transparent; overflow: hidden; height: 100px;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+	     -o-box-shadow: none;
+	        box-shadow: none; }
+form.blur .extra-fields { visibility: hidden; }
+
+.ie7 .extra-fields { display: none; }
+
+form.search .chzn-select-deselect { width: 250px; }
+form.search .chzn-choices {
+	padding: 0;
+	margin: 0;
+	border-color: #cccccc;
+-webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+        border-radius: 3px;
+        box-shadow: 0 1px 2px rgba(0,0,0,.35); }
+
+.chzn-choices input,
+.chzn-choices .search-choice { font-size: 13px; }
+
+/* primary search box */
+.primary-search { margin: 0 0 .5em; }
+.primary-search .chzn-choices .search-field input { width: 188px; }
+.primary-search .chzn-container-multi .chzn-choices .search-choice { padding: 8px 19px 8px 6px; }
+.primary-search .chzn-container { margin-top: 1px; width: 200px; }
+.ie7 .primary-search .chzn-container { float: left; /* float fix for ie7 */ }
+
+form.search button { background: transparent url('../images/t1/btn-search.png') no-repeat scroll 0 0; border: 0; color: #decfbe; display: inline-block; float: right; height: 32px; padding: 0 1em; text-indent: -9999px; width: 39px; }
+
+.main > .wrapper { min-height: 530px; padding: 26px; position: relative; margin: 115px 0 0; }
+.bg .main > .wrapper { margin-top: 80px }
+.ie7 .main > .wrapper { top: 80px; margin-top: 0; margin-bottom: 126px; }
+
+.main h1 { font-size: 48px; line-height: .9em; margin: 0 0 .5em; }
+.main h2 { color: #EC2A2B; font-size: 34px; }
+.main h3,
+.main h4 { color: #724122; font-size: 18px; }
+
+.main h1.product-name { max-width: 475px; }
+
+.main p,
+.main li,
+.main td,
+.main th { font-size: 18px; line-height: 1.35em; }
+.main p { margin: 0 0 1em; }
+.main ul { margin: .5em 0 1em 2em; }
+
+.left { float: left; }
+.right { float: right; }
+
+.main img.left { float: left; margin: 0 1em 1em 0; }
+.main img.right { float: right; margin: 0 0 1em 1em; }
+.main img.frame {}
+.main img.rotate-1 {
+-webkit-transform: rotate(3deg);
+   -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+     -o-transform: rotate(3deg);
+        transform: rotate(3deg);
+		zoom: 1; }
+.main img.rotate-2 {
+-webkit-transform: rotate(-3deg);
+   -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+     -o-transform: rotate(-3deg);
+        transform: rotate(-3deg);
+		zoom: 1; }
+
+#bd { position: relative; }
+
+.box1 { background: #FDB414; padding: 1em; margin: 0 0 1em; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+.box2 { background: #B9C957; padding: 1em; margin: 0 0 1em; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+.message-blue,
+.message-green,
+.message-yellow {
+	background: #94D5D7;
+	color: #FFFFFF;
+	float: left;
+	margin: 0 2em 2em 0;
+	padding: 1em 1em 0;
+	position: relative;
+	width: 265px;
+}
+.message-blue i,
+.message-green i,
+.message-yellow i {
+	background: transparent url('/images/t1/arrow-yellow.png') no-repeat 0 0;
+	bottom: -27px;
+	right: 30px;
+	display: block;
+	position: absolute;
+	height: 27px;
+	width: 25px;
+}
+.message-yellow {
+	background: #FDB414;
+}
+.message-green {
+	background: #00A64B;
+	width: 200px;
+}
+.message-blue i {
+	background: transparent url('/images/t1/arrow-blue.png') no-repeat 0 0;
+	left: 27px;
+}
+.message-green i {
+	background: transparent url('/images/t1/arrow-green.png') no-repeat 0 0;
+}
+.message-blue p,
+.message-green p,
+.message-yellow p {
+	font-size: 16px;
+}
+.message-blue .pin-it,
+.message-green .pin-it,
+.message-yellow .pin-it {
+position: absolute!important;
+bottom: -10px;
+right: 12px;
+}
+.location {
+	font-style: italic;
+}
+
+table.table1 { margin: 0 0 2em; }
+.table1 tr {}
+.table1 th { background: #58585A; color: #fff; }
+.table1 td { background: #FBF9F6;  }
+
+.table1 th,
+.table1 td { border: 1px solid #fff; padding: .5em 1em; }
+
+table.table2 { margin: 0 0 2em; }
+.table2 tr {}
+.table2 th { background: transparent; font-size: 16px; }
+.table2 td { background: transparent;  }
+
+.table2 th,
+.table2 td { border: 0; padding: .5em 1em; }
+
+
+
+
+/* --- PRODUCT STYLES --- */
+
+/*
+4 col grid: (648-4*12)/4 = 150
+*/
+
+.js .category-results,
+.js .product-results { visibility: hidden; }
+
+
+.category-results,
+.product-results { margin: 0 0 2em; }
+
+.category-results .category { margin: 5px 0; }
+.product-results .product { background: #fff; border: 1px solid #ccc; margin: 5px; width: 150px; height: 150px; }
+.product-results .product { cursor: pointer; }
+
+.category-results .category { width: 625px; height: 145px; }
+
+	.category-results .category:hover,
+	.product-results .product:hover { border-color: #EC2A2B; }
+
+.category img,
+.product img { position: absolute; top: 0; height: 100%; left: 0; max-height: 100%; max-width: 100%; width: 100%; }
+.category .content,
+.product .content { display: none; padding: 10px; position: relative; top: 0; left: 0; z-index: 2; }
+
+.category .content { top: 70px; }
+
+	.category h3,
+	.product h3 { margin: 0; font-size: 18px; }
+
+	.category h3 { min-height: 110px; display:none; } /* force the height of an attribute title so the buttons appear at the same place on the category tiles */
+
+
+/* .product .price { font-size: 32px; font-weight: bold; text-align: right; } */
+
+.category .description { display: none; /* not going to be used in production. if you uncomment this, also modify .category h3 min/max-height */ font-weight: normal; text-shadow: 0 1px 0 #fff;  }
+
+/* .product .description { margin-bottom: 1em; } */
+/*.category .large-only, */
+.product .large-only { display: none; }
+
+/* large square (when clicked) */
+.category-results .large,
+.product-results .large { width: 312px; height: 312px; }
+
+.large .large-only { display: block; }
+.large .content { padding: 20px; }
+.large h3 { font-size: 24px; margin-bottom: .25em; }
+
+
+/*
+.cta .price { float: left; font-size: 32px; font-weight: bold; margin: 0 0 .5em; }
+.cta .add-to-cart { background: #828B3F; color: #fff; font-weight: bold; float: right; padding: 1em 2em; text-decoration: none;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px; }
+.cta .add-to-cart:hover { background-color: #5F662E; }
+*/
+
+.attributes,
+.more-info,
+.ingredients { clear: both; }
+
+.more-info { background-color: #D7C0B0; background-color: rgba(0,0,0,.1); color: #a56214; cursor: pointer; padding: .5em 1em; text-align: center; margin: 1em 0;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px; }
+.more-info:hover { background-color: #e36b1d; }
+
+.more-info a { color: #e36b1d; text-decoration: none; height: 100%; display: block; }
+.more-info:hover a { color: #fff; }
+
+.button,
+.category .button,
+.product .button,
+.add-to-cart a { font-family: "ProximaNovaBold", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; border: 0; border-top: 1px solid #fece66; color: #fff; display: inline-block; font-size: 16px; height: 38px; padding: 0 .9em; line-height: 38px; text-decoration: none;
+	
+	text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.35);
+	   -moz-box-shadow: 0 1px 3px rgba(0,0,0,.35);
+	     -o-box-shadow: 0 1px 3px rgba(0,0,0,.35);
+	        box-shadow: 0 1px 3px rgba(0,0,0,.35);
+
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+
+	background: #EC2A2B; /* Old browsers */
+	background: -moz-linear-gradient(top, #f86000 0%, #EC2A2B 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f86000), color-stop(100%,#EC2A2B)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f86000 0%,#EC2A2B 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f86000 0%,#EC2A2B 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f86000 0%,#EC2A2B 100%); /* IE10+ */
+	background: linear-gradient(top,  #f86000 0%,#EC2A2B 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f86000', endColorstr='#EC2A2B',GradientType=0 ); /* IE6-9 */
+}
+
+.button:hover,
+.category .button:hover,
+.product .button:hover,
+.add-to-cart a:hover {
+	background: #EC2A2B; /* Old browsers */
+	background: -moz-linear-gradient(top,  #EC2A2B 0%, #f86000 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EC2A2B), color-stop(100%,#f86000)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #EC2A2B 0%,#f86000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #EC2A2B 0%,#f86000 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #EC2A2B 0%,#f86000 100%); /* IE10+ */
+	background: linear-gradient(top,  #EC2A2B 0%,#f86000 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EC2A2B', endColorstr='#f86000',GradientType=0 ); /* IE6-9 */
+}
+
+.product h3 { color: #592e14; }
+
+.product .button { float: right; }
+.category .view-category { text-align: right; }
+
+.category .content,
+.product:hover .content,
+.large .content { display: block; }
+
+.product:hover img,
+.large img {
+	opacity: .3;
+	filter: alpha(opacity = 50); /* iefix for opacity */
+	zoom: 1; /* ensures element has 'position' iefix */ }
+
+
+.tools { position: absolute; text-align: right; top: 3.5em; right: 2em; }
+.tools > span { vertical-align: top; }
+
+
+/* product page purchase/pricing */
+.purchase { font-weight: bold; overflow: hidden; }
+.purchase .price { color: #FDB414; float: left; font-size: 32px; }
+.purchase .add-to-cart a { float: right; }
+.purchase .add-to-cart a:hover {}
+
+ul.attributes { margin: 0 0 2em; min-height: 48px; padding: 0; }
+
+/* attribute sprite */
+.attributes li { background: #fDB414 none; display: block; float: left; height: 32px; margin: 0 10px 10px 0; opacity: 0.7; padding: 8px; width: 32px; z-index: 2;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px; }
+
+.attributes li.more { cursor: pointer; }
+
+.ie7 .attributes li { background-color: #819B26; }
+.attributes li img { height: auto; opacity: 1 !important; filter: alpha(opacity = 100); position: static; width: auto; }
+/* sprite attributes no longer used
+	.attributes li.a { background-position: 50% 8px; }  48-32 = 16 / 2 = 8 - 50px = 42px spread apart sprite
+	.attributes li.b { background-position: 50% -42px; }
+	.attributes li.c { background-position: 50% -92px; }
+	.attributes li.d { background-position: 50% -142px; }
+*/
+	.attributes li:hover { opacity: 1; }
+
+.tooltip { position: relative; }
+	.tooltip-box { padding: 10px 10px 20px; position: absolute; text-indent: 0; top: -1px; line-height: 1.3em; left: 0px; font-size: 16px; width: 150px; z-index: 900;
+
+		background: #FBF9F6 none;
+
+		border: 4px solid black;
+
+		-webkit-box-shadow: 0 2px 5px rgba(0,0,0,.3);
+		   -moz-box-shadow: 0 2px 5px rgba(0,0,0,.3);
+		     -o-box-shadow: 0 2px 5px rgba(0,0,0,.3);
+		        box-shadow: 0 2px 5px rgba(0,0,0,.3);
+
+		-webkit-border-radius: 6px;
+		   -moz-border-radius: 6px;
+		     -o-border-radius: 6px;
+		        border-radius: 6px;
+ }
+
+	.tooltip-box-arrow { background: transparent url('../images/t1/tooltip-arrow.png') no-repeat scroll 0 0; content: '.'; width: 32px; height: 20px; text-indent: -9999px; position: absolute; bottom: -20px; left: 9px; }
+
+
+.ingredients { }
+ul.allergens { margin: 0; }
+.allergens li { display: block; float: left; height: 32px; list-style: none; margin: 0 7px 7px 0; padding-bottom: 16px; }
+
+.chicklet-print { background: transparent url('../images/t1/icon-print.png') no-repeat scroll 0 -32px; cursor: pointer; display: inline-block; font-size: 70px; height: 32px; text-align: left; text-indent: -9999px; width: 32px; }
+
+.chicklet-print:hover { background-position: 0 0; }
+
+
+.product-image h4 { margin-bottom: 0; }
+.product-image ul { margin: .5em 0 0;}
+.product-image li { background: transparent none no-repeat scroll 0 0; list-style-type: none; padding-left: 22px; line-height: 1.2em; margin: 0 0 .5em; min-height: 18px; }
+.product-image > img { margin-bottom: 1em; }
+
+
+/* nutrition facts */
+.nutrition-facts { background-color: #fff; border: 2px solid #000; color: #000; margin: 0 0 1em; padding: 3px; max-width: 100%; letter-spacing: -0.7px;
+	border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0;  }
+.nutrition-facts table { -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+     -o-box-shadow: none;
+        box-shadow: none;width: 100%; }
+.nutrition-facts tbody {}
+.nutrition-facts th,
+.nutrition-facts td { background: #fff; border: none; font-family: Verdana, Tahoma, sans-serif; color: #000; padding: 3px 0; text-align: left; text-shadow: 0 0 0 #fff; }
+.nutrition-facts .daily-value { text-align: right; }
+.nutrition-facts tr td { border-bottom: 1px solid #000; }
+.nutrition-facts tr.no-border td { border: none; }
+.nutrition-facts tr.thick-border td { border-bottom: 4px solid #000; }
+.nutrition-facts tr.super-thick-border td { border-bottom: 8px solid #000; }
+.nutrition-facts th { font-size: 13px; font-weight: bold; }
+.nutrition-facts td { font-size: 9px; }
+.nutrition-facts td:nth-child(2n) { text-align: right; width: 30%;}
+.nutrition-facts td.sub { padding-left: 6px; }
+.nutrition-facts .vitamins span:after { content: ' \2022'; }
+.nutrition-facts .vitamins span.last:after { content: ''; }
+
+
+/* END PRODUCT STYLES */
+
+/* news list styles */
+#news {
+	margin: 0;
+}
+#news li {
+	clear: both;
+	list-style: none;
+	overflow: auto;
+}
+
+/* recipes */
+
+.recipe {
+	border: 1px solid #231F20;
+}
+.recipe-head {
+	background: #231F20;
+	padding: .2em .2em .2em 1em;
+}
+.recipe-head .tools {
+	height: 33px;
+	position: static;
+}
+.recipe-head .tools a {
+color: #FFFFFF;
+font-size: 16px;
+padding-right: 1em;
+vertical-align: top;
+line-height: 2em;
+}
+.recipe-body {
+	padding: 1em 1em 0 1em;
+}
+.recipe-head h2 {
+	color: #FFFFFF;
+	float: left;
+	font-size: 16px;
+	padding-top: .4em;
+	text-transform: none;
+}
+.main ul.recipe-nav {
+	margin-left: 0;
+	width: 370px;
+}
+.recipe-nav li {
+	list-style: none;
+}
+
+/* homepage slideshow styles */
+.main_view { position: relative; height: 520px; }
+.window { height: 449px; width: 633px; overflow: hidden; position: relative; top: 41px; left: 28px; }
+.image_reel { position: absolute; top: 0; left: 0; }
+.image_reel img { float: left; border:0; }
+.paging {
+	height:20px; 
+	right: 0;
+	margin: 0;
+	position: absolute;
+	top: 486px;
+	z-index: 100;
+	text-align: center;
+	display: none;
+}
+.paging a { background: transparent url('../images/slideshow/slide-selectors.png') no-repeat scroll -21px 0; /* sprite also located in same directory slide-selectors.psd */ display: inline; float: left; width: 20px; height: 20px; margin: 0 5px; text-decoration: none; color: #000; }
+.paging a.active,
+.paging a:hover { background-position: 0 0; }
+
+/**
+ * Non-semantic helper classes: please define your styles before this section.
+ */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
+   j.mp/bestclearfix */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix { zoom: 1; }
+
+
+
+/**
+ * Media queries for responsive design.
+ *
+ * These follow after primary styles so they will successfully override.
+ */
+
+@media all and (orientation:portrait) {
+  /* Style adjustments for portrait mode goes here */
+
+}
+
+@media all and (orientation:landscape) {
+  /* Style adjustments for landscape mode goes here */
+
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
+   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+
+
+  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+
+
+/**
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ */
+@media print {
+	  * { /* background: transparent !important; */ color: black !important; text-shadow: none !important; filter:none !important;
+	  -ms-filter: none !important;
+
+		-webkit-webkit-box-shadow: none !important;
+	   -moz-box-shadow: none !important;
+	     -o-box-shadow: none !important;
+	        box-shadow: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+	  a, a:visited { color: #222 !important; text-decoration: underline; }
+	  a[href]:after { content: " (" attr(href) ")"; }
+	  abbr[title]:after { content: " (" attr(title) ")"; }
+	  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+	  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+	  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+	  tr, img { page-break-inside: avoid; }
+	  @page { margin: 0.5cm; }
+	  p, h2, h3 { orphans: 3; widows: 3; }
+	  h2, h3{ page-break-after: avoid; }
+
+	.leftside,
+	.search,
+	.header,
+	.main-bg,
+	.tools,
+	.more-info,
+	.fb-like,
+	.footer li.terms,
+	.footer li.privacy,
+	.attributes,
+	.nav { display: none !important; }
+	.ingredients { display: block; visibility: visible; }
+
+
+	body { background: transparent !important; }
+
+	.header-bar,
+	.main h1 { border-bottom: none; }
+
+	.main { margin: 0 auto; width: 90% !important; }
+	.main > .wrapper { border: 0; clear: both; margin: 10px 0; }
+}/* end @media print */

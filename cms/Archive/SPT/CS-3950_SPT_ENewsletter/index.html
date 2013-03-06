@@ -1,0 +1,623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+		<style type="text/css">
+			/* Client-specific Styles */
+			#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" button. */
+			body{width:100% !important;} .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+			body{-webkit-text-size-adjust:none;} /* Prevent Webkit platforms from changing default text sizes. */
+			
+			/* Reset Styles */
+			body{margin:0; padding:0;}
+			img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+			table td{border-collapse:collapse;}
+			#backgroundTable{height:100% !important; margin:0; padding:0; width:100% !important;}
+			
+			/* Template Styles */
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: COMMON PAGE ELEMENTS /\/\/\/\/\/\/\/\/\/\ */
+
+			body, #backgroundTable{
+				background: #F6F6F7 url(images/bg_x.gif) repeat-x 0 0;
+			}
+			
+			/**
+			* @tab Page
+			* @section email border
+			* @tip Set the border for your email.
+			*/
+			#templateContainer{
+				border:0;
+			}
+			
+			/**
+			* @tab Page
+			* @section heading 1
+			* @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
+			* @style heading 1
+			*/
+			h1, .h1{
+				color:#005BB3;
+				display:block;
+				font-family:Arial;
+				font-size:16px;
+				font-weight:bold;
+				line-height:135%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:1%;
+				margin-left:0;
+				padding-top:10px;
+				text-align:left;
+				text-transform: uppercase;
+			}
+
+			/**
+			* @tab Page
+			* @section heading 2
+			* @tip Set the styling for all second-level headings in your emails.
+			* @style heading 2
+			*/
+			h2, .h2{
+				background:#837870 url('images/bg_sidebar.gif') no-repeat 100% 50%;
+				color:#FFFFFF;
+				display:block;
+				font-family:Arial;
+				font-size:10px;
+				font-weight:normal;
+				line-height:200%;
+				height:19px;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:0;
+				margin-left: 2px;
+				padding-top:0;
+				padding-left:17px;
+				text-align:left;
+				text-transform: uppercase;
+			}
+
+			/**
+			* @tab Page
+			* @section heading 3
+			* @tip Set the styling for all third-level headings in your emails.
+			* @style heading 3
+			*/
+			h3, .h3{
+				border-bottom: #F9BD9B 2px solid;
+				color:#000000;
+				display:block;
+				font-family:Arial;
+				font-size:12px;
+				font-weight:bold;
+				line-height:100%;
+				margin-top:2%;
+				margin-right:0;
+				margin-bottom:1%;
+				margin-left:0;
+				padding-bottom: 4px;
+				text-align:left;
+			}
+			h3.table {
+				font-size:10px;
+				padding-left:6px;
+			}
+
+			/**
+			* @tab Page
+			* @section heading 4
+			* @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
+			* @style heading 4
+			*/
+			h4, .h4{
+				color:#333333;
+				display:block;
+				font-family:Arial;
+				font-size:9px;
+				font-weight:bold;
+				line-height:100%;
+				margin-top:2%;
+				margin-right:0;
+				margin-bottom:1%;
+				margin-left:0;
+				text-align:left;
+				text-transform: uppercase;
+			}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: PREHEADER /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Header
+			* @section preheader style
+			* @tip Set the background color for your email's preheader area.
+			* @theme page
+			*/
+			#templatePreheader{
+				background-color:#FAFAFA;
+			}
+			
+			/**
+			* @tab Header
+			* @section social bar style
+			* @tip Set the background color and border for your email's footer social bar.
+			*/
+			#social div{
+				text-align:right;
+			}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: HEADER /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Header
+			* @section header style
+			* @tip Set the background color and border for your email's header area.
+			* @theme header
+			*/
+			#templateHeader{
+				background-color: none;
+			}
+			
+			#templateBody {
+				background: transparent url('images/bg.png') repeat-y 0 0;
+			}
+			
+			/**
+			* @tab Header
+			* @section header text
+			* @tip Set the styling for your email's header text. Choose a size and color that is easy to read.
+			*/
+			.headerContent{
+				color:#202020;
+				font-family:Arial;
+				font-size:10px;
+				font-weight:bold;
+				line-height:100%;
+				padding:0;
+				text-align: left;
+				vertical-align:middle;
+			}
+			.headerContent div {
+				width:610px;height:117px;overflow:hidden;padding:0;margin:0;
+			}
+			
+			/**
+			* @tab Header
+			* @section header link
+			* @tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
+			*/
+			.headerContent a:link, .headerContent a:visited, /* Yahoo! Mail Override */ .headerContent a .yshortcuts /* Yahoo! Mail Override */{
+				color:#005BB3;
+				font-weight:normal;
+				text-decoration:underline;
+			}
+			
+			#headerImage{
+				height:auto;
+				max-width:610px !important;
+			}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MAIN BODY /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Body
+			* @section body style
+			* @tip Set the background color for your email's body area.
+			*/
+			.bodyContent{
+			}
+			
+			/**
+			* @tab Body
+			* @section body text
+			* @tip Set the styling for your email's main content text. Choose a size and color that is easy to read.
+			* @theme main
+			*/
+			.bodyContent div{
+				color:#333333;
+				font-family:Arial;
+				font-size:11px;
+				line-height:130%;
+				text-align:left;
+			}
+			
+			/**
+			* @tab Body
+			* @section body link
+			* @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
+			*/
+			.bodyContent div a:link, .bodyContent div a:visited, /* Yahoo! Mail Override */ .bodyContent div a .yshortcuts /* Yahoo! Mail Override */{
+				color:#333333;
+				font-weight:bold;
+				text-decoration:underline;
+			}
+			.bodyContent div a.more {
+				display: block;
+				height: 16px;
+				margin-top: 5px;
+				width: 80px;
+			}
+			
+			.bodyContent img{
+				display:inline;
+				height:auto;
+			}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: SIDEBAR /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Sidebar
+			* @section sidebar style
+			* @tip Set the background color and border for your email's sidebar area.
+			*/
+			#templateSidebar{
+				margin: 0;
+				padding: 0;
+			}
+			
+			/**
+			* @tab Sidebar
+			* @section sidebar style
+			* @tip Set the background color and border for your email's sidebar area.
+			*/
+			.sidebartop {
+				margin-top:0;
+				margin-bottom:0;
+				margin-left: 5px;
+				* margin-left: 3px;
+				padding:0;
+			}
+			.sidebartop div{
+				background: white url('images/sidebar_top.gif') no-repeat 0 0;
+				width: 150px;
+				height: 14px;
+				padding-top:0px;
+				padding-right:0px;
+				padding-bottom:0px;
+				padding-left: 5px;
+				margin: 0px;
+			}
+			/**
+			* @tab Sidebar
+			* @section sidebar text
+			* @tip Set the styling for your email's sidebar text. Choose a size and color that is easy to read.
+			*/
+			.sidebarContent div{
+				color:#333333;
+				font-family:Arial;
+				font-size:10px;
+				line-height:130%;
+				text-align:left;
+				margin-left: 3px;
+				padding-left:0;
+				padding-right:0;
+				padding-bottom:10px;
+			}
+			
+			.sidebarContent div .sidebackground {
+				background-color: #ECECEC;
+				padding-left: 17px;
+				padding-right: 10px;
+				padding-top: 14px;
+			}
+			
+			/**
+			* @tab Sidebar
+			* @section sidebar link
+			* @tip Set the styling for your email's sidebar links. Choose a color that helps them stand out from your text.
+			*/
+			.sidebarContent div a:link, .sidebarContent div a:visited, /* Yahoo! Mail Override */ .sidebarContent div a .yshortcuts /* Yahoo! Mail Override */{
+				color:#005CB3;
+				font-weight:normal;
+				text-decoration:none;
+			}
+			.sidebarContent div a:hover {
+				text-decoration:underline;
+			}
+			
+			.sidebarContent img{
+				display:inline;
+				height:auto;
+			}
+
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: FOOTER /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Footer
+			* @section footer style
+			* @tip Set the background color and top border for your email's footer area.
+			* @theme footer
+			*/
+			#templateFooter{
+			}
+			
+			/**
+			* @tab Footer
+			* @section footer text
+			* @tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
+			* @theme footer
+			*/
+			.footerContent div{
+				color:#A7A8AC;
+				font-family:Arial;
+				font-size:10px;
+				line-height:125%;
+				text-align:left;
+			}
+			
+			/**
+			* @tab Footer
+			* @section footer link
+			* @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
+			*/
+			.footerContent div a:link, .footerContent div a:visited, /* Yahoo! Mail Override */ .footerContent div a .yshortcuts /* Yahoo! Mail Override */{
+				color:#818181;
+				font-weight:normal;
+				text-decoration:underline;
+			}
+			
+			.footerContent img{
+				display:inline;
+			}
+
+			table.information tr td {
+				border-bottom:1px solid #DEDFE0;
+				color:#333333;
+				font-size: 10px;
+			}
+			table.information tr td.first {
+				padding-left: 6px;
+			}
+			
+			/**
+			* Overrides & Classes
+			*/
+			.black {
+				color:#231F20;
+			}
+			.orange {
+				color:#E36F2E;
+			}
+			.blue {
+				color:#005BB3;
+			}
+			.lightblue {
+				color:#7FADD9;
+			}
+			.grey {
+				color:#6D6E70;
+			}
+			.strong {
+				font-weight: bold;
+			}
+			.italic {
+				font-style: italic;
+			}
+			.sidebarContent div .small, .small {
+				font-size: 11px;
+			}
+			.bigblue {
+				color:#005BB3;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+			.large {
+				font-size: 13px;
+			}
+			.black {
+				color:#231F20;
+			}
+			ol, ul, li {
+				padding: 0;
+				margin: 0;
+				
+			}
+			li {
+				margin: 4px 0 0 19px;
+				padding: 0 0 0 0;
+			}
+
+		</style>
+	</head>
+  <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+  	<center>
+    	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable">
+      	<tr>
+        	<td align="center" valign="top">
+          	<table border="0" cellpadding="0" cellspacing="0" width="610" id="templateContainer">
+            	<tr>
+              	<td align="center" valign="top">
+                  <!-- // Begin Template Header \\ -->
+                	<table border="0" cellpadding="0" cellspacing="0" width="610" id="templateHeader">
+                    <tr>
+                    	<td class="headerContent">
+												<div>
+                      		<img src="images/header.gif" style="max-width:610px;" id="headerImage campaign-icon" />
+												</div>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- // End Template Header \\ -->
+                </td>
+              </tr>
+							
+              	<td align="center" valign="top">
+                  <!-- // Begin Template Body \\ -->
+                	<table border="0" cellpadding="0" cellspacing="0" width="610" id="templateBody">
+                  	<tr>
+                    	<!-- // Begin Sidebar \\ -->
+                    	<td valign="top" width="160" id="templateSidebar">
+                      	<table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top:12px;padding-bottom:23px;">
+                        	<tr>
+                          	<td valign="top">
+                            
+                              <!-- // Begin Module: Standard Content \\ -->
+                              <table border="0" cellpadding="0" cellspacing="0" width="100%" class="sidebarContent">
+                                <tr>
+                                  <td valign="top" style="padding:0;margin:0;">
+                                    <div>
+																			<h2 class="h2">IN THIS ISSUE</h2>
+																			<div class="sidebackground">
+																			<h4>news</h4>
+																				<a href="">PortfolioCenter 5.4 Coming Soon – Sign Up for the Release</a><br /><br />
+
+																				<a href="">Introducing Schwab OpenView Integrated Office&trade;</a><br /><br />
+
+																				<a href="">Catch Our Sessions at IMPACT&reg; 2011</a><br /><br />
+
+																				<h4>Support &amp; Resources</h4>
+																				<a href="">Understanding Partial Wash Sales</a><br /><br />
+
+																				<a href="">Update on PortfolioCenter</a><br /><br />
+
+																				<a href="">Supported Technologies</a><br /><br />
+
+																				<a href="">Explore Presentation Studio Through Our New Training Video</a>
+																			</div>
+																			<br /><br />
+																			<h2 class="h2">additional resources</h2>
+																			<div class="sidebackground">
+																				<h4>Top Tools &amp; Resources</h4>
+																				<a href="">Uses of Categories</a><br /><br />
+
+																				<a href="">Finding Securities Not
+																				Assigned to a Category</a><br /><br />
+
+																				<a href="">Calculating Asset Class Intervals</a><br /><br />
+
+																				<a href="">Generating PortfolioCenter
+																				Reports for Troubleshooting Cost Basis Issues</a><br /><br />
+
+																				<h4>Upcoming Events</h4>
+																				<a href=""><strong>IMPACT&reg; 2011 Conference</strong><br />
+																				November 1–4, 2011<br />
+																				San Francisco, CA</a><br /><br />
+
+																				<h4>Regional Training Classes</h4>
+																				<a href="">Seattle, WA: Oct. 18–20</a><br />
+																				<a href="">Cincinnati, OH: Nov. 15–17</a><br />
+																				<a href="">Atlanta, GA: Dec. 6–8</a><br /><br />
+
+																				<a href="">For details, see our regional
+																				training schedule.</a><br /><br />
+
+																				<h4>What You Missed</h4>
+																				<a href="">New Presentations Package Available</a><br /><br />
+
+																				<a href="">Get Billing Resources and Best Practices Online</a><br /><br />
+
+																				<a href="">Back Up and Test Your
+																				PortfolioCenter Data</a>
+																			</div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                              <!-- // End Module: Standard Content \\ -->
+                            
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <!-- // End Sidebar \\ -->
+                    	<td style="padding-left: 0; padding-right:0;" valign="top" class="bodyContent">
+                      
+                        <!-- // Begin Module: Standard Content \\ -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td valign="top" style="padding-top:12px;padding-left: 23px;padding-right: 28px;">
+                             <div>
+																<img src="images/portfolio_center.gif" width="277" height="19" alt="Portfolio Center">
+															   <h1 class="h1">News</h1>
+																	<h3>PortfolioCenter 5.4 Coming Soon&mdash;Sign Up for the Release</h3>
+																	Watch for the PortfolioCenter 5.4 release in November. With the introduction of asset-class performance pages, this release will further expand the PortfolioCenter client presentation capabilities. Additionally, the release will feature several important cost basis enhancements to help you prepare for the next phase of the regulations, including:<br /><br />
+																	<ul>
+																		<li><span class="strong blue">A lot-level reconciliation tool</span> that simplifies the task of identifying and correcting out-of-balance positions</li>
+																		<li><span class="strong blue">Cost Basis Reset Wizard enhancements</span> that streamline the process of updating cost basis data in PortfolioCenter to match your custodian</li>
+																		<li><span class="strong blue">Expanded capabilities</span> to support the second phase of the cost basis regulations, which take effect on January 1, 2012, and cover mutual funds, dividend reinvestment plans, and exchange traded funds</li>
+																	</ul><br />
+																	To learn more about the cost basis features in PortfolioCenter 5.4 and for an overview of the cost basis changes coming in 2012, register for our December 7 webcast. You can also sign up to be notified when PortfolioCenter 5.4 is available for download.<br /><br />
+
+																	For additional cost basis resources, visit the cost basis page on schwabpt.com/costbasis.<br /><br />
+
+																	<h3>Introducing Schwab OpenView Integrated Office&trade;</h3>
+																	Last year, Schwab Advisor Services&trade; announced Schwab Intelligent Integration&trade;, a multiyear initiative to help advisors improve integration between the disparate systems and workflows in their office. Schwab Intelligent Technologies&trade; is the new company that will work with best-in-class technology providers to create intelligent integration solutions for advisors.<br /><br />
+
+																	As a participating provider, Schwab Performance Technologies is excited to introduce Schwab OpenView Integrated Office, a turnkey platform that brings together Salesforce&reg; client relationship management (CRM) customized for advisors who custody with Schwab and our own PortfolioServices outsourced portfolio accounting and performance reporting solution. <br /><br />
+
+																	Advisors using this prepackaged, integrated platform will be able to see real-time Schwab custody data&mdash;such as balances, transactions, holdings, and alerts&mdash;directly within the CRM. And because the outsourced portfolio management is based on PortfolioCenter technology and supported by our industry-leading service teams, it&rsquo;s a great option for advisors who currently use PortfolioCenter and are looking for a simpler, hosted solution for their firm.<br /><br />
+
+																	Schwab OpenView Integrated Office is currently in pilot&mdash;watch for general availability in the coming months. For more information, visit the Schwab Intelligent Technologies website or contact SPT sales.<br /><br />
+
+																	<h3>Catch Our Sessions at IMPACT&reg; 2011</h3>
+																	See the latest product demos at the IMPACT 2011 conference in San Francisco, November 1 to 4. Stop by the Schwab Center to talk to our staff and learn about the upcoming PortfolioCenter enhancements. And be sure to attend our three sessions:<br /><br />
+
+																	<ul>
+																		<li>Preview the Schwab OpenView Integrated Office Turnkey Solution</li>
+																		<li>Selecting a Back-Office Technology Outsource Provider: Advisor Panel</li>
+																		<li>Improve Client Communications with PortfolioCenter Presentations</li>
+																	</ul><br />
+
+																	Learn more about these sessions and register today at www.impact.schwab.com.<br /><br />
+
+																	<h1>support &amp; resources</h1>
+																	<h3>Understanding Partial Wash Sales</h3>
+																	If you reconcile cost basis regularly, you will likely notice a small cost basis variance for some positions and a wash sale indicator on the cost basis reconciliation report. A wash sale occurs when you realize a loss on the sale of a position, but buy that position again within 30 days of the sale. Smaller variances with the wash sale indicator usually occur when your client receives reinvested income either 30 days before the sale or receives a trailing reinvested dividend 30 days after the sale.<br /><br />
+
+																	<strong>To stop receiving email from us, please <a href="">unsubscribe</a>.</strong><br /><br /><br />
+															</div>
+														</td>
+                          </tr>
+                        </table>
+                        <!-- // End Module: Standard Content \\ -->
+                      
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- // End Template Body \\ -->
+                </td>
+              </tr>
+            	<tr>
+              	<td align="center" valign="top">
+                  <!-- // Begin Template Footer \\ -->
+                	<table border="0" cellpadding="0" cellspacing="0" width="610" id="templateFooter">
+                  	<tr>
+                    	<td valign="top" class="footerContent">
+                      
+                        <!-- // Begin Module: Standard Footer \\ -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td valign="top" style="padding-left:0;padding-right:0;padding-top:0;">
+															<div>
+			                      		<img src="images/footer.png" style="max-width:610px;" width="610" height="10" id="headerImage campaign-icon" />
+															</div>
+															<div style="padding-left:8px;padding-right:8px;padding-top:8px;">We respect your privacy. Read more about Schwab Performance Technologies&rsquo; privacy policy.
+															<br /><br />
+
+															NOTICE: All email sent to or from the Charles Schwab corporate email system may be retained, monitored and/or reviewed by Schwab personnel.<br /><br />
+															
+															Schwab Performance Technologies, Two Hannover Square, 13th Floor, 434 Fayetteville Street, Raleigh, NC 27601, USA.<br /><br />
+
+															&copy;2011 Schwab Performance Technologies. All rights reserved. Schwab Performance Technologies is a subsidiary 
+															of The Charles Schwab Corporation.
+															</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- // End Module: Standard Footer \\ -->
+                      
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- // End Template Footer \\ -->
+                </td>
+              </tr>
+            </table>
+            <br />
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>

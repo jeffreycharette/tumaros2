@@ -1,0 +1,5 @@
+authtype basic
+authgroupfile /dev/null
+authuserfile /home/content/f/i/x/fixlegal/htconfig/.htpassword.ghtpassword
+authname "Secure Area"
+require user 

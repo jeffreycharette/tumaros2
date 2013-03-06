@@ -1,0 +1,30 @@
+
+/*Text styles*/
+body, td     { color: #000; font-size: 11px; font-family: Georgia, "Times New Roman", Times, serif; line-height: 14px }
+.bdy-indent1 { margin: 5px 0 0 10px; padding: 0 }
+.bdy-indent2 { margin: 0 0 0 20px; padding: 0 }
+a    { color: #069; text-decoration: none }
+a:hover    { color: #069; text-decoration: underline }
+li   { list-style-image: url("../Graphics/bullets/gry-line.jpg") }
+h1    { font-size: 15px; font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif; font-weight: bold; margin: 0 0 3px; border-bottom: 1pt solid black }
+h2  { font-size: 11px; font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif; font-weight: bold; margin: 10px 0 0; padding: 0 }
+.list  { font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif }
+.list_indt  { font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif; margin: 0 0 0 10px }
+/*Boxes
+*/
+.box-left  { background-color: #e5e5e5; border-top: 1px solid black; border-right: 0; border-bottom: 1px solid black; border-left: 1px solid black }
+.box-top  { border-style: solid solid none; border-width: 1px 1px 0; border-color: black }
+.box-bot     { font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif; background-color: #86817d; padding: 10px; border-style: none solid solid; border-width: 0 1px 1px; border-color: black }
+.box-mid  { background-color: #e5e5e5; border-top: 1px solid black; border-right: 0 none; border-bottom: 1px solid black; border-left: 0 none }
+.box-rit  { background-color: #e5e5e5; border-top: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; border-left: 0 none }
+.boxoutline { background-color: #e5e5e5; border: solid 1px black }
+.greybox  { color: black; font-size: 11px; font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif; margin: 10px 10px 0 }
+.greybox A { color: #61aa7f; text-decoration: none }
+.greybox A:hover { color: #61aa7f; text-decoration: underline }
+/*show list*/
+.menuboarders-mid   { background-color: #e5e5e5; border-right: 1px solid black; border-bottom: 1px solid black; border-left: 1px solid black }
+.menuheadline  { color: white; font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif; font-weight: bold; background-color: #069 }
+.show-top { border-top: 1px solid black; border-right: 1px solid black; border-bottom: 0; border-left: 1px solid black }
+.show-bot { color: #fff; font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif; background-color: #86817d; padding: 5px; border-top: 0; border-right: 1px solid black; border-bottom: 1px solid black; border-left: 1px solid black }
+.show-bot A { color: #fff; font-weight: bold; text-decoration: none }
+.show-bot A:hover { color: #fff; font-weight: bold; text-decoration: underline }

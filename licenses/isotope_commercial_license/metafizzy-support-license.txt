@@ -1,0 +1,8 @@
+Support License
+==========================
+
+You can now leverage me to help you implement Masonry or Isotope.Email support requests to: support@metafizzy.co.
+
+When submitting an issue, provide a link to the site you’re having trouble with. I can’t debug your problem without live code. If your project is confidential, try re-creating the issue in jsFiddle.
+
+Typical response time is within 3 business days. I make no guarantees that I can completely resolve your issue, but I will do my best job to help you out.

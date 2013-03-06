@@ -1,0 +1,7 @@
+You must change the "base" variable in the menu.js code to reflect the correct domain name.  For example:
+//Set variable for base address:base="file://localhost/Volumes/Photography/New%20ICA%20rev%202/web-content/"
+
+Should be changed to:
+base="http://sjica.org/"
+
+
