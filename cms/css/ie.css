@@ -1,9 +1,0 @@
-.droplinetabs ul li ul{
-	background: #A0A095;
-	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-}
-
-#scroller #scroller_overlay {
-  background: none;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/back.png', sizingMethod='scale');
-}
